@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!--link rel="stylesheet" type="text/css" href="styleweather.css"-->
+</head>
+<body ng-app="weatherApp">
+<div ng-controller="HttpController">
+    <input ng-model="city" placeholder="Enter City">
+    <button ng-click="readfromURL()">Search</button>
+    <!--p>{{weatherReport|json}}</p-->
+    <br>
+    <p>{{cityname}}</p>
+    <br>
+    <table>
+        <caption>Current Weather</caption>
+        <thead>
+        <th>Day</th>
+        <th>Temperature</th>
+        <th>Weather</th>
+        <th>Humidity</th>
+        <th>WindSpeed</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{currentWeather['day']}}</td>
+            <td>{{currentWeather['temperature'] | temperature}}</td>
+            <td>{{currentWeather['weather']}}</td>
+            <td>{{currentWeather['humidity']}}</td>
+            <td>{{currentWeather['windspeed']}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <table>
+        <caption>Five-Day Weather</caption>
+        <thead>
+        <!--th>Date</th-->
+        <th>Day</th>
+        <th>Temperature</th>
+        <th>Weather</th>
+        <th>Humidity</th>
+        <th>WindSpeed</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="w in weatherReport">
+            <!--td>{{w['date']}}</td-->
+            <td>{{w['day']}}</td>
+            <td>{{w['temperature'] | temperature}}</td>
+            <td>{{w['weather']}}</td>
+            <td>{{w['humidity']}}</td>
+            <td>{{w['windspeed']}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script src="controller_weather1.js"></script>
+</html>

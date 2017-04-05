@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Appear on Click</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="styleweather.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="myWeatherApp">
+<div ng-controller="weatherController" class="w3-container">
+    <div class="w3-container searchbox">
+        <input id="search-box-input" ng-model="city" placeholder="Enter City" class="w3-twothird w3-container w3-input w3-border w3-border-grey">
+        <button id="search-box-button" ng-click="citySubmit(city)" class="w3-third w3-container w3-btn w3-blue w3-border w3-border-blue">Search</button>
+    </div>
+
+    <div ng-include src="enteredCity.cityUrl" class="w3-container w3-section">
+    </div>
+</div>
+</body>
+<!--script src="controller_weather.js"></script-->
+<!--script src="service.js"></script-->
+<script src="controller.js"></script>
+</html>

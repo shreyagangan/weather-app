@@ -1,0 +1,37 @@
+<!--p>You are seeing {{viewName}}!</p>
+<table>
+    <caption>Current Weather</caption>
+    <thead>
+    <th>Day</th>
+    <th>Temperature</th>
+    <th>Weather</th>
+    <th>Humidity</th>
+    <th>WindSpeed</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{currentWeather['day']}}</td>
+        <td>{{currentWeather['temperature'] | temperature}}</td>
+        <td>{{currentWeather['weather']}}</td>
+        <td>{{currentWeather['humidity']}}</td>
+        <td>{{currentWeather['windspeed']}}</td>
+    </tr>
+    </tbody>
+</table-->
+
+<!--div-- class="w3-container w3-section">
+    <div class="w3-container w3-section">
+        {{cityname}}
+    </div>
+    <div class="w3-container w3-section w3-row">
+        <div class="w3-half">{{currentWeather['temperature'] | temperature}}</div>
+        <div class="w3-half">Wind Speed: {{currentWeather['windspeed']}}</div>
+    </div>
+    <div class="w3-container w3-section w3-row">
+        <div class="w3-half">{{currentWeather['weather']}}</div>
+        <div class="w3-half">Humidity: {{currentWeather['humidity']}}</div>
+    </div>
+</div-->
+
+<div ng-include src="dayView.viewURL">
+</div>

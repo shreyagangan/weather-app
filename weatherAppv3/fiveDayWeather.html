@@ -1,0 +1,21 @@
+<p>You are seeing {{viewName}}!</p>
+<table>
+    <caption>Five-Day Weather</caption>
+    <thead>
+    <!--th>Date</th-->
+    <th>Day</th>
+    <th>Temperature</th>
+    <th>Weather</th>
+    <th>Humidity</th>
+    <th>WindSpeed</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="w in weatherReport">
+        <td>{{w['day']}}</td>
+        <td>{{w['temperature'] | temperature}}</td>
+        <td>{{w['weather']}}</td>
+        <td>{{w['humidity']}}</td>
+        <td>{{w['windspeed']}}</td>
+    </tr>
+    </tbody>
+</table>

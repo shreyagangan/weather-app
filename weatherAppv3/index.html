@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Appear on Click</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="myWeatherApp">
+<div ng-controller="weatherController">
+    <input ng-model="city" placeholder="Enter City">
+    <button ng-click="citySubmit()">Search</button>
+    <div id="details" ng-include src="enteredCity.cityUrl">
+    </div>
+</div>
+</body>
+<script src="controller_weather.js"></script>
+</html>

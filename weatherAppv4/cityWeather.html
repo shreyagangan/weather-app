@@ -1,0 +1,11 @@
+<!--header class="w3-container w3-teal">
+    <h1>{{cityname}}</h1>
+</header-->
+
+    <div class="w3-btn-group ">
+        <button ng-click="viewCurrent()" class="w3-btn w3-yellow days">Current</button>
+        <button ng-click="viewFiveDay()" class="w3-btn w3-lime days">Five-Day Forecast</button>
+    </div>
+
+    <!--p>{{viewName}} Rocks!!</p-->
+    <div ng-include src="selectedView.viewURL" class="w3-container w3-border w3-round-xlarge"></div>

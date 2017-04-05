@@ -1,0 +1,28 @@
+<div class="w3-container w3-section">
+    <div class="w3-btn-group">
+        <button ng-repeat="w in weatherReport" ng-click="getDayWeather(w)" class="w3-btn w3-yellow days">{{w['day']}}</button>
+    </div>
+    <div ng-include src="dayView.viewURL" class="w3-container w3-border w3-round-xlarge">
+        <!--div ng-include src="selectedView.viewURL" class="w3-container w3-border w3-round-xlarge"></div-->
+    </div>
+</div>
+<!--p>You are seeing {{viewName}}!</p>
+<table>
+    <caption>Five-Day Weather</caption>
+    <thead>
+    <th>Day</th>
+    <th>Temperature</th>
+    <th>Weather</th>
+    <th>Humidity</th>
+    <th>WindSpeed</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="w in weatherReport">
+        <td>{{w['day']}}</td>
+        <td>{{w['temperature'] | temperature}}</td>
+        <td>{{w['weather']}}</td>
+        <td>{{w['humidity']}}</td>
+        <td>{{w['windspeed']}}</td>
+    </tr>
+    </tbody>
+</table-->

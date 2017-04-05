@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!--link rel="stylesheet" type="text/css" href="styleweather.css"-->
+</head>
+<body ng-app="weatherApp">
+<div ng-controller="HttpController">
+    <input ng-model="city" placeholder="Enter City">
+    <button ng-click="readfromURL()">Search</button>
+    <!--p>{{weatherReport|json}}</p-->
+    <br>
+    <br>
+    <br>
+    <table>
+        <caption>{{cityname}}</caption>
+        <tbody>
+            <tr>
+                <td>{{temperatureF | temperature}}</td>
+                <td>{{weather}}</td>
+            </tr>
+            <tr>
+                <td>Humidity: {{humidity}}</td>
+                <td>Wind Speed: {{windspeed}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <table>
+        <caption>Five-Day Weather</caption>
+        <tbody>
+        <thead>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Temperature</th>
+            <th>Weather</th>
+            <th>Humidity</th>
+            <th>WindSpeed</th>
+        </thead>
+        <tr>
+            <td>{{date}}</td>
+            <td>{{day}}</td>
+            <td>{{temperatureF | temperature}}</td>
+            <td>{{weather}}</td>
+            <td>{{humidity}}</td>
+            <td>{{windspeed}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script src="controller_weather1.js"></script>
+</html>

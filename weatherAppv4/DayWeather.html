@@ -1,0 +1,13 @@
+<div class="w3-container w3-section">
+    <div class="w3-container w3-section">
+        {{cityname}}
+    </div>
+    <div class="w3-container w3-section w3-row">
+        <div class="w3-half">{{currentWeather['temperature'] | temperature}}</div>
+        <div class="w3-half">Wind Speed: {{currentWeather['windspeed']}}</div>
+    </div>
+    <div class="w3-container w3-section w3-row">
+        <div class="w3-half">{{currentWeather['weather']}}</div>
+        <div class="w3-half">Humidity: {{currentWeather['humidity']}}</div>
+    </div>
+</div>

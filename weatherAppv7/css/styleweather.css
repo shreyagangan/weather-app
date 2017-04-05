@@ -1,0 +1,30 @@
+button.w3-btn.days
+{
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+div.w3-btn-group
+{
+    margin-left: 10%;
+}
+
+div.w3-container.searchbox
+{
+    margin-top: 50px;
+    height: 40px;
+}
+
+#search-box-button
+{
+    height: inherit;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+#search-box-input
+{
+    height: inherit;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
